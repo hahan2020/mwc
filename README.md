@@ -35,7 +35,7 @@ mwc通过mwcMainApplication类实现应用的入口main函数，用户只需实�
 
     class MyFrame extends mwcMainFrame {
        MyButton btn = new MyButton();
-       btn.addListener(new Listener(){
+       btn.addEvent(new ClickEvent(){
           click() {
              System.out.print("hello world");
           }
