@@ -33,22 +33,21 @@ mwc通过mwcMainApplication类实现应用的入口main函数，用户只需实�
 
 # 程序事例
 
-class MyFrame extends mwcMainFrame {
-   MyButton btn = new MyButton();
-   btn.addListener(new Listener(){
-      click() {
-         System.out.print("hello world");
-      }
-   });
-   this.add(btn, 10, 100);
-}
-class MyApplication extends mwcMainApplication {
-   public void init(){
-      mainFrame = new MyFrame();
-      mainFrame.show();
-   }
-}
-
-int main() {
-   MyApplication app = new MyApplication();
-}
+    class MyFrame extends mwcMainFrame {
+       MyButton btn = new MyButton();
+       btn.addListener(new Listener(){
+          click() {
+             System.out.print("hello world");
+          }
+       });
+       this.add(btn, 10, 100);
+    }
+    class MyApplication extends mwcMainApplication {
+       public void init(){
+          mainFrame = new MyFrame();
+          mainFrame.show();
+       }
+    }
+    int main() {
+       MyApplication app = new MyApplication();
+    }
